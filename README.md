@@ -103,7 +103,7 @@ Two views were created for the third and last SQL query: `logviews` and `logerro
 #### Logviews
 
 ```
-create view logviews as select time::date as day, count(*) as views from log group by time::date;
+CREATE VIEW logviews as SELECT time::date as day, count(*) as views from log GROUP BY time::date;
 ```
 
 ```
@@ -129,7 +129,7 @@ select * from logviews limit 10;
 #### Logerrors
 
 ```
-create view logerrors as select time::date as day, count(*) as errors from log where status like '%404%' group by time::date;
+CREATE VIEW logerrors as SELECT time::date as day, count(*) as errors from log WHERE status like '%404%' GROUP BY time::date;
 ```
 
 ```
@@ -164,4 +164,4 @@ select * from logerrors limit 10;
 
 ### Output
 
-You can check the output text file here. 
+You can check the output text file [here](https://github.com/mguidoti/FSND-p3-log_analysis/blob/master/lognews.txt). 
